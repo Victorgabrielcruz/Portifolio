@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VG Creations</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <header>
         <img src="../img/logo.png" alt="Sua Logo" class="logo">
         <nav>
@@ -80,29 +82,31 @@
     <section>
         <div class="dashboard-container">
             <!-- Certificado 1 -->
-            <div class="certificado" onclick="mostrarDetalhes('certificado1')">
-                <img src="../img/Certificado_HTML_CSS_JS.png" alt="Certificado 1">
-                <h3>Certificado 1</h3>
+            <div class="certificado" >
+                <img src="../img/Certificado_HTML_CSS_JS.png" onclick="document.getElementById('modal01').style.display='block'" class="w3-hover-opacity">
+                
             </div>
-        
+            
             <!-- Certificado 2 -->
-            <div class="certificado" onclick="mostrarDetalhes('certificado2')">
-                <img src="certificado2.jpg" alt="Certificado 2">
-                <h3>Certificado 2</h3>
+            <div class="certificado" >
+                <img src="../img/Certificado_Latino_Ware.jpg" onclick="document.getElementById('modal02').style.display='block'" class="w3-hover-opacity">
+                
             </div>
-        
-            <!-- Adicione mais certificados conforme necessário -->
-        
+                
         </div>
         
-        <!-- Modal para Detalhes do Certificado -->
-        <div class="modal" id="certificado1">
-            <span class="fechar" onclick="fecharDetalhes('certificado1')">&times;</span>
-            <img src="../img/Certificado_HTML_CSS_JS.png" alt="Certificado 1">
-            <p>Detalhes do Certificado 1...</p>
-        </div> 
     </section>
-       
+    <div id="modal01" class="w3-modal w3-animate-zoom cen" onclick="this.style.display='none'">
+        <img class="w3-modal-content" src="../img/Certificado_HTML_CSS_JS.png">
+      </div>
+    <div class="botao-contato">
+        <a href="../index.html">
+            <img src="../img/botao-home.png" alt="">
+        </a>
+    </div>
+    <div id="modal02" class="w3-modal w3-animate-zoom cen" onclick="this.style.display='none'">
+        <img class="w3-modal-content" src="../img/Certificado_Latino_Ware.jpg">
+      </div>
     <div class="botao-contato">
         <a href="../index.html">
             <img src="../img/botao-home.png" alt="">
@@ -111,6 +115,5 @@
     <footer>
         <p id="text">&copy; 2023 Víctor Gabriel Cruz Pereira. Todos os direitos reservados.</p>
     </footer>
-
 </body>
 </html>
